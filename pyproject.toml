@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta" 
+
+[project]
+name = "bg3dice"
+version = "1.0.0"
+description = "Simple bg3-like dice roll gif generator" 
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE.txt" }
+keywords = ["bg3", "dice", "roller", "gif"]
+authors = [{ name = "Daniil", email = "dan.2k64@gmail.com" }]
+maintainers = [
+  { name = "Daniil", email = "dan.2k64@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.12",
+
+]
+dependencies = ["Pillow>=9.0.0", "imageio>=2.9.0"]
+
+[project.optional-dependencies]
+dev = ["check-manifest"]
+test = ["coverage"]
+
+[project.urls]
+"Source" = "https://github.com/danissomo/bg3dice"
+
+[project.scripts]
+bg3dice = "bg3dice:main"
+
+[tool.setuptools]
+package-data = { "bg3dice" = ["assets/*"] }
