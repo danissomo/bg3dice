@@ -2,7 +2,7 @@
 
 Example:
 
-![example](doc\ex.gif)
+![example](https://github.com/danissomo/bg3dice/raw/refs/heads/master/doc/ex.gif)
 
 ## Install 
 
@@ -12,6 +12,8 @@ linux
 ```bash
 git clone https://github.com/danissomo/bg3dice
 cd bg3dice
+python3 -m venv venv
+source venv/bin/activate
 pip install .
 ```
 
@@ -19,12 +21,14 @@ Windows
 ```shell
 git clone https://github.com/danissomo/bg3dice
 cd bg3dice
+py -m venv venv
+.\venv\Scripts\activate
 py -m pip install .
 ```
 
 ### From TestPyPi
 
-```
+```bash
 pip install -i https://test.pypi.org/simple/ bg3dice
 ```
 
